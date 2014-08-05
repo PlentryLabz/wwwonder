@@ -1,0 +1,378 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actionmailer (3.2.13)
+      actionpack (= 3.2.13)
+      mail (~> 2.5.3)
+    actionpack (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      journey (~> 1.0.4)
+      rack (~> 1.4.5)
+      rack-cache (~> 1.2)
+      rack-test (~> 0.6.1)
+      sprockets (~> 2.2.1)
+    activemodel (3.2.13)
+      activesupport (= 3.2.13)
+      builder (~> 3.0.0)
+    activerecord (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activeresource (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
+      multi_json (~> 1.0)
+    addressable (2.3.6)
+    ancestry (2.1.0)
+      activerecord (>= 3.0.0)
+    ansi (1.4.3)
+    arel (3.0.3)
+    awesome_print (1.2.0)
+    aws-sdk (1.38.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt-ruby (3.0.1)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    bootstrap-wysihtml5-rails (0.3.1.23)
+      railties (>= 3.0)
+    bower-rails (0.7.3)
+    bson (1.10.2)
+    bson_ext (1.10.2)
+      bson (~> 1.10.2)
+    builder (3.0.4)
+    callsite (0.0.11)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    celluloid-io (0.15.0)
+      celluloid (>= 0.15.0)
+      nio4r (>= 0.5.0)
+    cocoon (1.2.6)
+    coderay (1.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.3.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.7.1)
+    coveralls (0.7.0)
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      term-ansicolor
+      thor
+    debug_inspector (0.0.2)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    docile (1.1.3)
+    dotenv (0.10.0)
+    equalizer (0.0.9)
+    erubis (2.7.0)
+    excon (0.33.0)
+    execjs (2.2.1)
+    factory_girl (4.4.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
+      railties (>= 3.0.0)
+    faker (1.3.0)
+      i18n (~> 0.5)
+    ffi (1.9.3)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
+    formatador (0.2.4)
+    gon (5.0.4)
+      actionpack (>= 2.3.0)
+      json
+    guard (2.6.0)
+      formatador (>= 0.2.4)
+      listen (~> 2.7)
+      lumberjack (~> 1.0)
+      pry (>= 0.9.12)
+      thor (>= 0.18.1)
+    guard-spring (0.0.4)
+      guard
+      spring
+    guard-test (2.0.4)
+      guard (~> 2.0)
+      test-unit (~> 2.2)
+    haml (4.0.5)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
+    hashie (2.1.1)
+    heroku (3.6.0)
+      heroku-api (~> 0.3.17)
+      launchy (>= 0.3.2)
+      netrc (~> 0.7.7)
+      rest-client (~> 1.6.1)
+      rubyzip
+    heroku-api (0.3.18)
+      excon (~> 0.27)
+      multi_json (~> 1.8)
+    high_voltage (2.1.0)
+    hike (1.2.3)
+    i18n (0.6.1)
+    ice_nine (0.11.0)
+    jbuilder (2.1.1)
+      activesupport (>= 3.0.0, < 5)
+      multi_json (~> 1.2)
+    journey (1.0.4)
+    jquery-fileupload-rails (0.4.1)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+    jquery-rails (3.1.1)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    json (1.8.1)
+    kaminari (0.15.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
+    kgio (2.9.2)
+    launchy (2.4.2)
+      addressable (~> 2.3)
+    libv8 (3.16.14.3)
+    listen (2.7.1)
+      celluloid (>= 0.15.2)
+      celluloid-io (>= 0.15.0)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+    lumberjack (1.0.5)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    meta_request (0.2.9)
+      callsite
+      rack-contrib
+      railties
+    method_source (0.8.2)
+    mime-types (1.25.1)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
+    mini_portile (0.5.3)
+    minitest (4.7.5)
+    mongo (1.10.2)
+      bson (= 1.10.2)
+    mongo_mapper (0.13.0)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0)
+      mongo (~> 1.8)
+      plucky (~> 0.6.5)
+    multi_json (1.10.1)
+    netrc (0.7.7)
+    nio4r (1.0.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
+    pg (0.17.1)
+    plucky (0.6.6)
+      mongo (~> 1.5)
+    polyamorous (1.0.0)
+      activerecord (>= 3.0)
+    polyglot (0.3.5)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    quiet_assets (1.0.3)
+      railties (>= 3.1, < 5.0)
+    rack (1.4.5)
+    rack-cache (1.2)
+      rack (>= 0.4)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
+    rack-ssl (1.3.4)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (3.2.13)
+      actionmailer (= 3.2.13)
+      actionpack (= 3.2.13)
+      activerecord (= 3.2.13)
+      activeresource (= 3.2.13)
+      activesupport (= 3.2.13)
+      bundler (~> 1.0)
+      railties (= 3.2.13)
+    rails-gallery (0.3.3)
+      hashie (>= 2.0.0)
+      rails (>= 3.1)
+    railties (3.2.13)
+      actionpack (= 3.2.13)
+      activesupport (= 3.2.13)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (>= 0.14.6, < 2.0)
+    raindrops (0.13.0)
+    rake (10.3.2)
+    ransack (1.2.2)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.0.0)
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.3)
+      ffi (>= 0.5.0)
+    rb-readline (0.4.2)
+    rdoc (3.12.2)
+      json (~> 1.4)
+    ref (1.0.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    ruby-prof (0.14.2)
+    rubyzip (1.1.3)
+    s3_direct_upload (0.1.7)
+      coffee-rails (>= 3.1)
+      jquery-fileupload-rails (~> 0.4.1)
+      rails (>= 3.1)
+      sass-rails (>= 3.1)
+    sass (3.3.14)
+    sass-rails (3.2.6)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
+    simple_form (2.1.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
+    slop (3.5.0)
+    spring (1.1.2)
+    sprockets (2.2.2)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    state_machine (1.2.0)
+    subexec (0.2.3)
+    term-ansicolor (1.3.0)
+      tins (~> 1.0)
+    terminal-notifier-guard (1.5.3)
+    test-unit (2.5.5)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
+    thor (0.19.1)
+    thread_safe (0.3.4)
+    tilt (1.4.1)
+    timers (1.1.0)
+    tins (1.1.0)
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    turn (0.9.7)
+      ansi
+      minitest (~> 4)
+    twitter-bootstrap-rails (2.2.8)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
+    tzinfo (0.3.40)
+    uglifier (2.5.3)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    uuidtools (2.1.4)
+    validates (0.0.8)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    virtus (1.0.2)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0.3)
+      equalizer (~> 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ancestry
+  awesome_print
+  aws-sdk
+  bcrypt-ruby (~> 3.0.0)
+  better_errors
+  binding_of_caller
+  bootstrap-wysihtml5-rails
+  bower-rails
+  bson_ext
+  carrierwave
+  cocoon
+  coffee-rails (~> 3.2.1)
+  coveralls
+  execjs
+  factory_girl_rails (~> 4.0)
+  faker
+  foreman
+  gon
+  guard-spring
+  guard-test
+  haml-rails
+  heroku
+  high_voltage (~> 2.1.0)
+  jbuilder
+  jquery-fileupload-rails
+  jquery-rails
+  kaminari
+  kaminari-bootstrap
+  meta_request
+  mini_magick
+  mongo_mapper
+  pg
+  pry
+  quiet_assets
+  rails (= 3.2.13)
+  rails-gallery
+  ransack
+  rb-readline (~> 0.4.2)
+  ruby-prof
+  s3_direct_upload
+  sass-rails (~> 3.2.3)
+  simple_form
+  simplecov
+  spring
+  state_machine
+  term-ansicolor
+  terminal-notifier-guard
+  therubyracer
+  turn
+  twitter-bootstrap-rails
+  uglifier (>= 1.0.3)
+  unicorn
+  validates
+  virtus
