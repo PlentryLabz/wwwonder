@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsTemplate::Application.load_tasks
+Wwwonder::Application.load_tasks

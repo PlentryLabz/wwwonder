@@ -43,6 +43,7 @@ gem 'ancestry'
 gem "cocoon"
 gem 'high_voltage', '~> 2.1.0'
 gem 'heroku'
+gem 'devise'
 
 gem 'jbuilder'
 gem 'gon'
