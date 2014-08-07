@@ -1,0 +1,28 @@
+<div ng-app="App">
+
+	<ng-view></ng-view>
+
+	<script type="text/ng-template" id="users-page.html">
+		<h1>USERS</h1>
+			<user ng-repeat="user in model.users" name="{{user.name}}" id="{{user.id}}">
+			</user>
+			<br/>
+			<input ng-model="model.newUser.name">
+			<button class="btn btn-primary" ng-click="create()">Add User {{model.newUser.name}}</button>
+			<span ng-bind="model.response"></span>
+	</script>
+
+	<script type="text/ng-template" id="user.html">
+		<div class="user">
+			<a class="user__link" ng-href="{{model.link}}">{{model.name}}</a>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="user-page.html">
+			<div class="user-page__right">
+				<span class="user-page__name">{{model.user.name}}</span>
+				<p class="user-page__info">{{model.user.info}}</p>
+			</div>
+	</script>
+
+</div>

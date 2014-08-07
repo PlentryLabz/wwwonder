@@ -1,6 +1,6 @@
 Wwwonder::Application.routes.draw do
 
-  devise_for :users
+  # devise_for :users
 
   resource :welcome, only: [:show]
   root to: 'welcome#show'
