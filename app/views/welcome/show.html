@@ -4,7 +4,7 @@
 
 	<script type="text/ng-template" id="users-page.html">
 		<h1>USERS</h1>
-			<user ng-repeat="user in model.users" name="{{user.name}}" id="{{user.id}}">
+			<user ng-repeat="user in model.users" email="{{user.email}}" id="{{user.id}}">
 			</user>
 			<br/>
 			<input ng-model="model.newUser.name">
@@ -14,14 +14,14 @@
 
 	<script type="text/ng-template" id="user.html">
 		<div class="user">
-			<a class="user__link" ng-href="{{model.link}}">{{model.name}}</a>
+			<a class="user__link" ng-href="{{model.link}}">{{model.email}}</a>
 		</div>
 	</script>
 
 	<script type="text/ng-template" id="user-page.html">
 			<div class="user-page__right">
-				<span class="user-page__name">{{model.user.name}}</span>
-				<p class="user-page__info">{{model.user.info}}</p>
+				<span class="user-page__name">{{model.user}}</span>
+				<p class="user-page__info">{{model.user}}</p>
 			</div>
 	</script>
 

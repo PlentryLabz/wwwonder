@@ -7,7 +7,7 @@
 			replace: true,
 			link: function (scope, element, attrs) {
 				scope.model = {
-					name: attrs.name,
+					email: attrs.email,
 	 				link : "#/users/" + attrs.id,
 					avatar : "avatarstorage/" + attrs.id
 				};
