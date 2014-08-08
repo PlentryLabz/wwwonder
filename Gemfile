@@ -39,6 +39,7 @@ gem 'validates'
 gem 'virtus'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "fog"
 gem 'ancestry'
 gem "cocoon"
 gem 'high_voltage', '~> 2.1.0'
