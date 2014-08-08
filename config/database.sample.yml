@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: wwwonder_dev
+  pool: 5
+  username: username
+  password: password
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: wwwonder_test
+  pool: 5
+  username: username
+  password: password
+  host: localhost
