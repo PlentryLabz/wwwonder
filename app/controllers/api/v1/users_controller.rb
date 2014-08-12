@@ -1,8 +1,8 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
 
   def index
-    @users = User.all
-    respond_with(@users, location: nil)
+    @search = User.search(params[:q])
+    @users = @search.result.page(params[:page]).per(20)
   end
 
   def show
