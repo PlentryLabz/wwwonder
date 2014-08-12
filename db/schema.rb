@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140812090501) do
+ActiveRecord::Schema.define(:version => 20140812123730) do
+
+  create_table "cities", :force => true do |t|
+    t.string   "name_ru",    :null => false
+    t.string   "name_en",    :null => false
+    t.string   "time_zone"
+    t.string   "latitude"
+    t.string   "longitute"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.datetime "created_at",                              :null => false
@@ -36,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20140812090501) do
     t.string   "instagram_link"
     t.date     "birth_date"
     t.string   "about"
+    t.integer  "city_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
