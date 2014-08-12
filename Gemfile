@@ -69,6 +69,7 @@ gem 's3_direct_upload'
 
 gem 'unicorn'
 gem 'foreman'
+gem 'sidekiq'
 
 gem 'coveralls', require: false
 gem 'simplecov'
