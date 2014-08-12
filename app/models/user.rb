@@ -7,4 +7,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :pic, :first_name, :second_name, :phone_number, :phone_confirmation_code, :vk_link, :twitter_link, :instagram_link, :birth_date, :about
 
   mount_uploader :pic, UsersUploader
+
+  def likes_count
+    images.map{|img| img.likes.count}.max
+  end
+
 end
