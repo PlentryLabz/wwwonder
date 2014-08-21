@@ -1,15 +1,23 @@
 <div ng-app="App">
 
+<div class="navbar navbar-inverse" ng-controller="AccountCtrl" >
+  <div class="navbar-inner">
+  	<div class="nav-collapse collapse">
+	    <a class="brand" href="#">WWWonderful!</a>
+	    <ul class="nav nav-pills">
+	      <li class="active"><a href="#/users">Участницы</a></li>
+	      <li><a href="#">Правила</a></li>
+	    </ul>
+   	</div>
+  </div>
+</div>
+
 	<ng-view></ng-view>
 
 	<script type="text/ng-template" id="users-page.html">
-		<h1>USERS</h1>
 			<user ng-repeat="user in model.users" email="{{user.email}}" id="{{user.id}}">
 			</user>
 			<br/>
-			<input ng-model="model.newUser.name">
-			<button class="btn btn-primary" ng-click="create()">Add User {{model.newUser.name}}</button>
-			<span ng-bind="model.response"></span>
 	</script>
 
 	<script type="text/ng-template" id="user.html">
