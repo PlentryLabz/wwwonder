@@ -8,7 +8,7 @@ class ApplicationUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    "/images/fallback/#{model.class.model_name.underscore}/" + [mounted_as, version_name].compact.join("_")
+    "/images/fallback/#{model.class.model_name.underscore}/pic.png"
   end
 
   def extension_white_list

@@ -140,9 +140,6 @@ GEM
       lumberjack (~> 1.0)
       pry (>= 0.9.12)
       thor (>= 0.18.1)
-    guard-spring (0.0.4)
-      guard
-      spring
     guard-test (2.0.4)
       guard (~> 2.0)
       test-unit (~> 2.2)
@@ -314,7 +311,6 @@ GEM
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
     slop (3.5.0)
-    spring (1.1.2)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -389,7 +385,6 @@ DEPENDENCIES
   fog
   foreman
   gon
-  guard-spring
   guard-test
   haml-rails
   heroku
@@ -415,8 +410,6 @@ DEPENDENCIES
   seed-fu
   sidekiq
   simple_form
-  simplecov
-  spring
   state_machine
   term-ansicolor
   terminal-notifier-guard

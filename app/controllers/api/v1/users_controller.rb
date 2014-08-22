@@ -12,6 +12,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
       else search.result
     end
     @users = filter.page(params[:page]).per(20)
+    respond_with(@users, location: nil)
   end
 
   def show

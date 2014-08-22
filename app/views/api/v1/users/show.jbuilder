@@ -15,3 +15,7 @@ json.(@user,
 json.pic @user.pic.url
 
 json.city(@user.city, :id, :name_ru, :name_en, :time_zone, :latitude, :longitute)
+
+json.images @user.images do |img|
+  json.(img, :id, :pic, :description)
+end

@@ -4,13 +4,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :pic, :first_name, :second_name, :phone_number, :phone_confirmation_code, :vk_link, :twitter_link, :instagram_link, :birth_date, :about
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :pic, :first_name, :second_name, :phone_number, :phone_confirmation_code, :vk_link, :twitter_link, :instagram_link, :birth_date, :about, :city_id
 
   belongs_to :city
+  has_many :images
 
   mount_uploader :pic, UsersUploader
 
-  validates :second_name, presence: true
   validates :city, presence: true
   validates :phone_number, presence: true
 
