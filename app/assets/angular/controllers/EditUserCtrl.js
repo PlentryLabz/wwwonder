@@ -1,8 +1,5 @@
-(function() {
-
-  App.controller("UserCtrl", function ($scope, $routeParams, Users) {
-
-    $scope.model = {}
+App.controller("EditUserCtrl", function ($scope, Users) {
+  $scope.model = {}
 
     var user = Users.get({id:$routeParams.id}, function () {
       
@@ -12,7 +9,4 @@
       $scope.model.img = data.pic;
       $scope.model.email = data.email;
     })
-
-  })
-
-})()
+})

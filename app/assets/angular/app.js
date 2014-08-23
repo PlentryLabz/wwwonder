@@ -12,5 +12,9 @@ App.config(function ($routeProvider) {
 			templateUrl : "user-page.html",
 			controller : "UserCtrl"
 		})
-})
+    .when('/edit', {
+      templateUrl : "edit-user-page.html",
+      controller : "EditUserCtrl"
+    })
+  })
 
