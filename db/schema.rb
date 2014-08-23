@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140821183942) do
+ActiveRecord::Schema.define(:version => 20140823141135) do
 
   create_table "cities", :force => true do |t|
     t.string   "name_ru",    :null => false
@@ -27,11 +27,22 @@ ActiveRecord::Schema.define(:version => 20140821183942) do
     t.string   "pic"
     t.string   "description"
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "likes_count", :default => 0
   end
 
   add_index "images", ["user_id"], :name => "index_images_on_user_id"
+
+  create_table "likes", :force => true do |t|
+    t.integer  "image_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "likes", ["image_id"], :name => "index_likes_on_image_id"
+  add_index "likes", ["user_id"], :name => "index_likes_on_user_id"
 
   create_table "users", :force => true do |t|
     t.datetime "created_at",                              :null => false

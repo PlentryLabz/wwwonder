@@ -9,6 +9,8 @@ Wwwonder::Application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show]
       resources :cities, only: [:index]
+      resources :images, only: [:index, :create, :destroy]
+      resources :likes, only: [:create, :destroy]
     end
   end
 end

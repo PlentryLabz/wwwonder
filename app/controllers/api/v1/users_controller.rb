@@ -8,7 +8,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
       when 'newest' then
         search.result.order(:created_at)
       when 'popular' then
-        search.result.includes(:images).order("image.likes_count desc")
+        search.result.joins(:images).order('likes_count DESC')
       else search.result
     end
     @users = filter.page(params[:page]).per(20)
@@ -16,8 +16,17 @@ class Api::V1::UsersController < Api::V1::ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    respond_with(@user, location: nil)
+    if params[:id] == 'current'
+      if user_signed_in?
+        @user = current_user
+        respond_with(@user, location: nil)
+      else
+        render json: {error: "User not sign in"}, status: 422
+      end
+    else
+      @user = User.find(params[:id])
+      respond_with(@user, location: nil)
+    end
   end
 
 end
