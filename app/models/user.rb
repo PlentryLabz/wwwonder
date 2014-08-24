@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   belongs_to :city
   has_many :images
   has_many :likes
+  has_many :smses, class_name: "Sms"
 
   mount_uploader :pic, UsersUploader
 

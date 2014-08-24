@@ -43,6 +43,7 @@ gem 'mini_magick'
 gem "fog"
 gem 'ancestry'
 gem "cocoon"
+gem 'configus'
 gem 'high_voltage', '~> 2.1.0'
 gem 'heroku'
 gem 'devise'
@@ -53,6 +54,7 @@ gem 'gon'
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
+gem 'rest-client'
 
 gem 'state_machine'
 gem 'kaminari'
