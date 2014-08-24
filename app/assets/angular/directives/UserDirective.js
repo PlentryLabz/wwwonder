@@ -9,7 +9,7 @@
 				scope.model = {
 					email: attrs.email,
 	 				link : "#/users/" + attrs.id,
-					avatar : "avatarstorage/" + attrs.id
+					avatar : "assets/" + attrs.pic,
 				};
 			}
 		}
