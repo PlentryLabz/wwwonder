@@ -17,7 +17,6 @@ App.controller("UserCtrl", function ($scope, $routeParams, Users) {
     $scope.model.birthday = data.birthday;
     $scope.model.about = data.about;
     $scope.model.city = data.city.name_ru;
-    console.log($scope.model);
   })
 
 })
