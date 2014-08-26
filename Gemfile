@@ -31,6 +31,8 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'pry'
   gem 'awesome_print'
+
+  gem 'pre-commit'
 end
 
 gem 'bcrypt-ruby', '~> 3.0.0'

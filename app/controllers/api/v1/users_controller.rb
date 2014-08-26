@@ -1,4 +1,5 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
+  before_filter :authenticate_user!, only: [:update]
 
   def index
     search = User.search(params[:q])
@@ -26,6 +27,15 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     else
       @user = User.find(params[:id])
       respond_with(@user, location: nil)
+    end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      respond_with(@user, location: nil)
+    else
+      render json: {errors: @user.errors}, status: 422
     end
   end
 
