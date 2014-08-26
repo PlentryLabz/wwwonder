@@ -1,6 +1,18 @@
 <h3>Редактирование пользователя</h1>
 
-<input ng-model="model.firstName"/>
+<input type="text" ng-model="model.user.firstName"/>
+
+<input type="text" ng-model="model.user.lastName"/>
+
+<input type="text" ng-model="model.user.instagram_link"/>
+
+<input type="text" ng-model="model.user.vk_link"/>
+
+<input type="text" ng-model="model.user.twitter_link"/>
+
+<input type="text" ng-model="model.user.birthday"/>
+
+<input type="text" ng-model="model.user.about"/>
 
 <hr/>
 <button class="btn btn-primary" ng-click="save()">Сохранить</button>

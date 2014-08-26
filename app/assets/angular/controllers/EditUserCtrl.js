@@ -1,25 +1,19 @@
-'use strict'
+App.controller("EditUserCtrl", function ($scope, Users) {
+    $scope.model = new Users();
 
-App.controller("EditUserCtrl", function($scope, Users) {
-    $scope.model = {}
+    var currentUser = Users.current();
 
-    var user = Users.current();
-
-    user.$promise.then(function(data) {
-        $scope.model.lastName = data.last_name || "asd";
-        $scope.model.firstName = data.first_name;
-        $scope.model.instagram = data.instagram_link;
-        $scope.model.vk = data.vk_link;
-        $scope.model.twitter = data.twitter_link;
-        $scope.model.images = data.images;
-        $scope.model.birthday = data.birthday;
-        $scope.model.about = data.about;
-        $scope.model.city = data.city.name_ru;
+    currentUser.$promise.then(function (data) {
+        $scope.model.user.last_name = data.last_name;
+        $scope.model.user.first_name = data.first_name;
+        $scope.model.user.instagram_link = data.instagram_link;
+        $scope.model.user.vk_link = data.vk_link;
+        $scope.model.user.twitter_link = data.twitter_link;
+        $scope.model.user.birthday = data.birthday;
+        $scope.model.user.about = data.about;
     })
 
-    $scope.save = function() {
-        user.last_name = $scope.model.lastName;
-        user.$update(function(data) {});
+    $scope.save = function () {
+        $scope.model.$update();
     }
-
 });
