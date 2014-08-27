@@ -17,21 +17,12 @@ class Api::V1::UsersController < Api::V1::ApplicationController
   end
 
   def show
-    if params[:id] == 'current'
-      if user_signed_in?
-        @user = current_user
-        respond_with(@user, location: nil)
-      else
-        render json: {error: "User not sign in"}, status: 422
-      end
-    else
-      @user = User.find(params[:id])
-      respond_with(@user, location: nil)
-    end
+    @user = User.find(params[:id])
+    respond_with(@user, location: nil)
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update_attributes(params[:user])
       respond_with(@user, location: nil)
     else
