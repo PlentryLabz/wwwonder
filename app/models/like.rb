@@ -1,6 +1,7 @@
 class Like < ActiveRecord::Base
-  attr_accessible :user_id, :image_id
+  attr_accessible :phone_id, :image_id
 
-  belongs_to :user
+  belongs_to :phone
+  belongs_to :user, through: :phone
   belongs_to :image, counter_cache: true
 end

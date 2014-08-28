@@ -14,8 +14,8 @@ class Sms::PhoneConfirmation < Sms
   end
 
   def update_user_with_code
-    user = self.user
-    user.update_attributes(phone_confirmation_code: @code)
+    phone = self.phone
+    phone.update_attributes(confirmation_code: @code)
   end
 
   def phone_confirmation_code

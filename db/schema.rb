@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140824071815) do
+ActiveRecord::Schema.define(:version => 20140828143025) do
 
   create_table "cities", :force => true do |t|
     t.string   "name_ru",    :null => false
@@ -36,32 +36,42 @@ ActiveRecord::Schema.define(:version => 20140824071815) do
 
   create_table "likes", :force => true do |t|
     t.integer  "image_id"
-    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "phone_id"
   end
 
   add_index "likes", ["image_id"], :name => "index_likes_on_image_id"
-  add_index "likes", ["user_id"], :name => "index_likes_on_user_id"
+
+  create_table "phones", :force => true do |t|
+    t.string   "number",            :null => false
+    t.string   "confirmation_code"
+    t.string   "state"
+    t.integer  "user_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "phones", ["number"], :name => "index_phones_on_number", :unique => true
+  add_index "phones", ["user_id"], :name => "index_phones_on_user_id"
 
   create_table "sms", :force => true do |t|
     t.string   "message"
-    t.string   "recipient"
-    t.integer  "user_id"
     t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "phone_id"
   end
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
-    t.string   "email",                   :default => "", :null => false
-    t.string   "encrypted_password",      :default => "", :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",           :default => 0,  :null => false
+    t.integer  "sign_in_count",          :default => 0,  :null => false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -69,8 +79,6 @@ ActiveRecord::Schema.define(:version => 20140824071815) do
     t.string   "pic"
     t.string   "first_name"
     t.string   "second_name"
-    t.string   "phone_number"
-    t.string   "phone_confirmation_code"
     t.string   "vk_link"
     t.string   "twitter_link"
     t.string   "instagram_link"

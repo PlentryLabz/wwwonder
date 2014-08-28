@@ -1,10 +1,11 @@
 class Sms < ActiveRecord::Base
   attr_accessor :state_code
-  attr_accessible :message, :recipient, :user_id
+  attr_accessible :message
 
-  belongs_to :user
+  belongs_to :phone
+  # belongs_to :user, through: :user
 
-  validates :recipient, :message, :user, presence: true
+  validates :phone, :message, presence: true
 
   state_machine initial: :init do
     state :init
@@ -45,6 +46,7 @@ class Sms < ActiveRecord::Base
   end
 
   def recipient
-    self.recipient = user.phone_number
+    phone.number
   end
+
 end

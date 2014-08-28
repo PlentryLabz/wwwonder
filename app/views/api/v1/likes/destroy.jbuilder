@@ -1,1 +1,1 @@
-json.(@like, :id, :user_id, :image_id)
+json.(@like, :id, :phone_id, :image_id)

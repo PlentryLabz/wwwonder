@@ -1,11 +1,9 @@
 class Api::V1::SmsesController < Api::V1::ApplicationController
 
   def send_phone_confirmation_code
-    user = user_signed_in? ? current_user : User.find_by_phone_number(params[:phone_number])
-    unless user.present?
-      user = User.create!(phone_number: params[:phone_number])
-    end
-    sms = Sms::PhoneConfirmation.new(user_id: user.id)
+    phone = Phone.find_by_number(params[:number])
+    sms = Sms::PhoneConfirmation.new
+    sms.phone = phone
     sms.sending
     if sms.delivered?
       render json: {result: 'success'}, status: 200
