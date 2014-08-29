@@ -3,7 +3,6 @@ class Sms < ActiveRecord::Base
   attr_accessible :message
 
   belongs_to :phone
-  # belongs_to :user, through: :user
 
   validates :phone, :message, presence: true
 

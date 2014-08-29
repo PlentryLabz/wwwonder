@@ -12,6 +12,8 @@ class Api::V1::CodeConfirmationsController < Api::V1::ApplicationController
         end
         if params[:image_id].present?
           redirect_to api_v1_like_create_without_auth_path(image_id: params[:image_id], number: phone.number)
+        else
+          render json: {error: "Image id required"}, status: 422
         end
       else
         render json: {error: 'Invalid confirmation code'}, status: 422

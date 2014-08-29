@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140828143025) do
+ActiveRecord::Schema.define(:version => 20140829174050) do
 
   create_table "cities", :force => true do |t|
     t.string   "name_ru",    :null => false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20140828143025) do
   end
 
   add_index "likes", ["image_id"], :name => "index_likes_on_image_id"
+  add_index "likes", ["phone_id", "image_id"], :name => "index_likes_on_phone_id_and_image_id", :unique => true
 
   create_table "phones", :force => true do |t|
     t.string   "number",            :null => false
