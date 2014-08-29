@@ -15,15 +15,8 @@ Wwwonder::Application.routes.draw do
       resources :likes, only: [:create, :destroy] do
         post :create_without_auth
       end
-      resource :smses, only: [] do
-        post :send_phone_confirmation_code
-      end
-      resources :phones, only: [:create] do
-        collection do
-          post :registration
-          post :like
-        end
-      end
+      resources :phones, only: [:create]
+      resource :code_confirmations, only: [:create]
     end
   end
 end
