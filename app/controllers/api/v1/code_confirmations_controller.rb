@@ -1,5 +1,6 @@
 class Api::V1::CodeConfirmationsController < Api::V1::ApplicationController
 
+  #FIXIT looks like pizdets
   def create
     phone = Phone.find_by_number(params[:number])
     if phone.present?
@@ -10,11 +11,11 @@ class Api::V1::CodeConfirmationsController < Api::V1::ApplicationController
             return render json: {error: phone.errors}, status: 422
           end
         end
-        if params[:image_id].present?
-          redirect_to api_v1_like_create_without_auth_path(image_id: params[:image_id], number: phone.number)
-        else
-          render json: {error: "Image id required"}, status: 422
+        like = Like.new(phone_id: phone.id, image_id: params[:image_id])
+        if like.save
+          return render json: {success: "Like it!"}, status: 202
         end
+        render json: {warning: "Not action"}, status: 200
       else
         render json: {error: 'Invalid confirmation code'}, status: 422
       end

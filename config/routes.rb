@@ -12,9 +12,7 @@ Wwwonder::Application.routes.draw do
 
       resources :cities, only: [:index]
       resources :images, only: [:index, :create, :destroy]
-      resources :likes, only: [:create, :destroy] do
-        post :create_without_auth
-      end
+      resources :likes, only: [:create, :destroy]
       resources :phones, only: [:create]
       resource :code_confirmations, only: [:create]
 
