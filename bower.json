@@ -1,0 +1,22 @@
+{
+    "lib": {
+        "name": "bower-rails generated lib assets",
+        "dependencies": {}
+    },
+    "vendor": {
+        "name": "bower-rails generated vendor assets",
+        "dependencies": {
+            "angular": "v1.3.0-rc.0",
+            "angular-devise": "v0.5.0",
+            "angular-resource": "v1.3.0-rc.0",
+            "angular-route": "v1.3.0-rc.0",
+            "angular-file-upload": "v1.1.1",
+            "jquery": "1.11.1",
+            "bootstrap": "v3.2.0",
+            "jquery-ujs": "v1.0.1"
+        },
+        "resolutions": {
+            "angular": "v1.3.0-rc.0"
+        }
+    }
+}

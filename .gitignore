@@ -25,3 +25,4 @@ coverage
 Procfile
 
 # /lib/assets/bower_components/
+bower_components

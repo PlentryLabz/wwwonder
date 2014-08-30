@@ -60,3 +60,22 @@ git flow feature start my_new_branch
 Если работаешь с кем-то в одной ветке, в начале работы проверяешь статус и далее `git pull --rebase`. Если не знаешь, как работает `rebase` не используешь его никогда (см. выше, что такое никогда) за исключением этого случая.
 Если однажды ты замечаешь за собой, что твоя рука набирает что-то типа `git ... --f`, остановись и подумай. Если дело дошло до того, что ты набрал `git ... --for`, то ударь себя по руке. Если ты набрал `git ... --force` и нажал enter, то ты либо мудак, либо у тебя были веские на то причины, подумай над этим.
 Прошу следовать этим правилам и тогда разработка будет легка и приятна, как легкий ветерочек на берегу озера Селигер.
+
+## Bower
+
+Пакетный менеджер для javascript-а, подробней [тут](http://bower.io/).
+
+Для корректной установки сделайте след. действия, взял от [сюда](http://stackoverflow.com/questions/12913141/installing-from-npm-fails):
+```
+sudo apt-get update
+sudo apt-get install -y python-software-properties
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+sudo npm install bower -g
+```
+
+Теперь ставим js-ные пакеты с помощью [bower-rails](https://github.com/42dev/bower-rails):
+```
+rake bower:install
+```
