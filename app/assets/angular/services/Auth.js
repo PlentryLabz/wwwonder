@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 App.service('Auth', function($resource) {
     var auth = $resource('http://localhost:3000/users/', {}, {

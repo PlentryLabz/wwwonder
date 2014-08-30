@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 App.controller("UsersCtrl", function($scope, Users) {
 

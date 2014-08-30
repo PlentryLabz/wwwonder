@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 App.controller("AccountCtrl", function($scope, Auth) {
     $scope.logout = function() {

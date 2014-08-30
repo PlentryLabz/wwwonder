@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 App.service('Users', function ($resource) {
     var users = $resource('http://localhost:3000/api/v1/users/:id',

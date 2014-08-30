@@ -1,3 +1,5 @@
+'use strict';
+
 App.controller("EditUserCtrl", function ($scope, Users) {
     $scope.model = new Users();
     $scope.model.user = {};

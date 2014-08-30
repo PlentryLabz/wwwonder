@@ -16,7 +16,7 @@ Wwwonder::Application.routes.draw do
       resources :phones, only: [:create]
       resource :code_confirmations, only: [:create]
 
-      resource :uploades, only: [:create]
+      resource :upload, only: [:create]
     end
   end
 end
