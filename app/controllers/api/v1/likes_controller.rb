@@ -14,8 +14,12 @@ class Api::V1::LikesController < Api::V1::ApplicationController
 
   def destroy
     @like = Like.find(params[:id])
-    @like.destroy
-    respond_with(@like, location: nil)
+    if @like.user == current_user
+      @like.destroy
+      respond_with(@like, location: nil)
+    else
+      render json: {'It isnt your like!'}, status: 422
+    end
   end
 
 end

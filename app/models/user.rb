@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   belongs_to :city
   has_many :images
   has_many :phones
-  has_many :likes, through: :phones
+  has_many :likes, through: :images
   has_many :smses, through: :phones
 
   mount_uploader :pic, UsersUploader

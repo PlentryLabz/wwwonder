@@ -12,4 +12,8 @@ class Like < ActiveRecord::Base
   def deny_by_myself
     errors.add(:phone_id, 'User cant make like to him photos') if phone.user == image.user
   end
+
+  def user
+    phone.user
+  end
 end
