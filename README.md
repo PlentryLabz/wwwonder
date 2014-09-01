@@ -90,7 +90,7 @@ rake bower:install
 
 Инструкции по установке и запуску Redis - [тут](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis).
 
-Запуск очереди - `bundle exec sidekiq`
+Запуск очереди - `bundle exec sidekiq -C config/sidekiq.yml`
 
 Монитор - `/sidekiq`
 

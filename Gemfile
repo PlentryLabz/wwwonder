@@ -43,6 +43,7 @@ gem 'validates'
 gem 'virtus'
 gem 'seed-fu'
 gem 'carrierwave'
+gem 'carrierwave_backgrounder'
 gem 'mini_magick'
 gem "fog"
 gem 'ancestry'

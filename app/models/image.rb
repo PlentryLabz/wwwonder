@@ -7,4 +7,6 @@ class Image < ActiveRecord::Base
   validates :user, presence: true
 
   mount_uploader :pic, ImagesUploader
+  process_in_background :pic
+  store_in_background :pic
 end

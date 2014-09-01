@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   has_many :smses, through: :phones
 
   mount_uploader :pic, UsersUploader
+  process_in_background :pic
+  store_in_background :pic
 
   validates :city, presence: true
 
