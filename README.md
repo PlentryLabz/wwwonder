@@ -79,3 +79,21 @@ sudo npm install bower -g
 ```
 rake bower:install
 ```
+
+## Sidekiq
+
+Работа с очередью сообщений. Использует многопоточность при обработки сообщений. В качестве бэкенда - Redis.
+
+[офф.сайт](http://sidekiq.org/)
+
+[github](https://github.com/mperham/sidekiq)
+
+Инструкции по установке и запуску Redis - [тут](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis).
+
+Запуск очереди - `bundle exec sidekiq`
+
+Монитор - `/sidekiq`
+
+## Конфиги
+
+Иногда для работы чего-то нужно заранее задать конфигурацию, например конфиги по работе с API Амазона или смс-провайдера. Эти данные не должны попасть в гит, поэтому передаются каким-то другим способом. Такие конфиги должны быть прописаны в файле `config/initializers/confgus.rb` перед запуском приложения. Пример содержимого - `config/configus.sample.rb`.

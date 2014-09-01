@@ -1,5 +1,5 @@
 class Phone < ActiveRecord::Base
-  attr_accessible :number
+  attr_accessible :number, :confirmation_code
 
   belongs_to :user
   has_many :likes

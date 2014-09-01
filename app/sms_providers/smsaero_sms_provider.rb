@@ -9,7 +9,7 @@ class SmsaeroSmsProvider
   }
 
   def send(sms)
-    url = 'http://gate.smsaero.ru/send/'
+    url = @config.send_url
     params = {
       answer: 'json',
       user: @config.user,
@@ -18,9 +18,7 @@ class SmsaeroSmsProvider
       text: sms.message,
       from: @config.from
     }
-    response = RestClient.post url, params
-    code = 1
-    CODES[code]
+    SmsSenderWorker.perform_async(url, params)
   end
 
 end

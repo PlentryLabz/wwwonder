@@ -1,3 +1,4 @@
+require 'sidekiq/web'
 Wwwonder::Application.routes.draw do
 
   devise_for :users
@@ -19,4 +20,10 @@ Wwwonder::Application.routes.draw do
       resource :upload, only: [:create]
     end
   end
+
+  resources :snippets
+  root to: "snippets#new"
+  mount Sidekiq::Web, at: "/sidekiq"
 end
+
+

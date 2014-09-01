@@ -10,9 +10,10 @@ class Sms < ActiveRecord::Base
     state :init
     state :pending
 
-    state :delivered do
-      validates :state_code, numericality: { greater_than: 0 }
-    end
+    # state :delivered do
+    #   validates :state_code, numericality: { greater_than: 0 }
+    # end
+    state :delivered
 
     state :failed do
       validates :state_code, numericality: { less_or_equal_than: 0 }

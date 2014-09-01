@@ -87,3 +87,7 @@ gem 'term-ansicolor'
 
 gem 'mongo_mapper'
 gem 'bson_ext'
+
+gem 'sinatra', require: false
+gem 'slim'
+gem 'multi_json'
