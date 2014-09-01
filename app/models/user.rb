@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :phones
   has_many :likes, through: :images
   has_many :smses, through: :phones
+  has_many :comments, dependent: :destroy
 
   mount_uploader :pic, UsersUploader
   process_in_background :pic
