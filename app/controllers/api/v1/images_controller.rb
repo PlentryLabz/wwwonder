@@ -9,13 +9,10 @@ class Api::V1::ImagesController < Api::V1::ApplicationController
   end
 
   def create
-    @image = Like.new(params[:image])
+    @image = Image.new(params[:image])
     @image.user = current_user
-    if @image.save
-      respond_with(@image, location: nil)
-    else
-      render json: {errors: @image.errors}, status: 422
-    end
+    @image.save
+    respond_with(@image, location: nil)
   end
 
   def destroy

@@ -7,11 +7,8 @@ class Api::V1::ProfilesController < Api::V1::ApplicationController
   end
 
   def update
-    if @user.update_attributes(params[:user])
-      respond_with(@user, location: nil)
-    else
-      render json: {errors: @user.errors}, status: 422
-    end
+    @user.update_attributes(params[:user])
+    respond_with(@user, location: nil)
   end
 
   private

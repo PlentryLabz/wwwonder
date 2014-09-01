@@ -6,6 +6,7 @@ class Image < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 
   validates :user, presence: true
+  validates :description, presence: true
 
   mount_uploader :pic, ImagesUploader
   process_in_background :pic
