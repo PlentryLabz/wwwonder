@@ -24,7 +24,7 @@ class Api::V1::ImagesController < Api::V1::ApplicationController
       @image.destroy
       respond_with(@image, location: nil)
     else
-      render json: {'It isnt your image!'}, status: 422
+      render json: {error: 'It isnt your image!'}, status: 422
     end
   end
 

@@ -65,7 +65,7 @@ git flow feature start my_new_branch
 
 Пакетный менеджер для javascript-а, подробней [тут](http://bower.io/).
 
-Для корректной установки сделайте след. действия, взял от [сюда](http://stackoverflow.com/questions/12913141/installing-from-npm-fails):
+Для корректной установки сделайте след. действия, взял [отсюда](http://stackoverflow.com/questions/12913141/installing-from-npm-fails):
 ```
 sudo apt-get update
 sudo apt-get install -y python-software-properties

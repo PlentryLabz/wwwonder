@@ -18,7 +18,7 @@ class Api::V1::LikesController < Api::V1::ApplicationController
       @like.destroy
       respond_with(@like, location: nil)
     else
-      render json: {'It isnt your like!'}, status: 422
+      render json: {error: 'It isnt your like!'}, status: 422
     end
   end
 
