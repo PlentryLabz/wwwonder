@@ -1,10 +1,10 @@
 require 'sidekiq/web'
 Wwwonder::Application.routes.draw do
 
-  devise_for :users
-
   resource :welcome, only: [:show]
   root to: 'welcome#show'
+
+  devise_for :users
 
   namespace :api, defaults: {format: :json} do
     namespace :v1 do

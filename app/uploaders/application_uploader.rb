@@ -5,7 +5,7 @@ class ApplicationUploader < CarrierWave::Uploader::Base
   storage :fog
 
   def store_dir
-    "system/uploads/#{model.class.model_name.underscore}/#{mounted_as}/#{model.id}"
+    "system/uploads/#{model.class.model_name.underscore}"
   end
 
   def default_url
@@ -17,6 +17,6 @@ class ApplicationUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-    file.extension.to_s if original_filename.present?
+    "#{mounted_as}_#{model.id}.#{file.extension.to_s}" if original_filename.present?
   end
 end
