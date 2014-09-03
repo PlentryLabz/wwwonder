@@ -15,6 +15,7 @@ App.controller("UserCtrl", function($log, $scope, $routeParams, Users, FileUploa
         $scope.model.vk = data.vk_link;
         $scope.model.twitter = data.twitter_link;
         $scope.model.avatar = data.pic;
+        $scope.model.avatar_tmp = data.pic_tmp;
         $scope.model.images = data.images;
         $scope.model.email = data.email;
         $scope.model.phone = data.phone_number;

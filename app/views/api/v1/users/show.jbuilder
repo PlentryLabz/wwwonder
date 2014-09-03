@@ -8,6 +8,7 @@ json.(@user,
   :instagram_link,
   :birth_date,
   :about,
+  :pic_tmp,
   :created_at,
   :updated_at)
 

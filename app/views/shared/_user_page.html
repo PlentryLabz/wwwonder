@@ -1,58 +1,57 @@
 <div class="user-page__headline">
-    <span class="user-page__place">
-    </span>
-    <span class="user-page__name">
-        {{model.firstName}} {{model.lastName}}
-    </span>
-    <span class="user-page__city-age">
-        <div class="user-page__city">
-            {{model.city}}
-        </div>
-        <div class="user-page__age">
-        </div>
-    </span>
+  <span class="user-page__place">
+  </span>
+  <span class="user-page__name">
+    {{model.firstName}} {{model.lastName}}
+  </span>
+  <span class="user-page__city-age">
+    <div class="user-page__city">
+      {{model.city}}
+    </div>
+    <div class="user-page__age">
+    </div>
+  </span>
 </div>
 <div class="user-page__main">
-    <div class="user-page__avatar-wrapper">
-        <img src="{{model.avatar}}" class="user-page__avatar" ng-click="avatarUploader.selectFile()">
-        <input ng-hide="true" id="avatar-uploader" type="file" nv-file-select uploader="avatarUploader"/>
-        <span class="user-page__like">
-        </span>
-        <span class="user-page__follow">
-        </span>
+
+  <div class="user-page__avatar-wrapper">
+    <img ng-src="{{model.avatar}}" err-src="uploads/tmp/{{model.avatar_tmp}}" class="user-page__avatar" ng-click="avatarUploader.selectFile()">
+    <input ng-hide="true" id="avatar-uploader" type="file" nv-file-select uploader="avatarUploader"/>
+    <span class="user-page__like">
+    </span>
+    <span class="user-page__follow">
+    </span>
+  </div>
+
+  <div class="user-page__socials">
+    <div class="user-page__vk">
+      {{model.vk}}
     </div>
-    <div class="user-page__socials">
-        <div class="user-page__vk">
-            {{model.vk}}
-        </div>
-        <div class="user-page__instagram">
-            {{model.instagram}}
-        </div>
-        <div class="user-page__twitter">
-            {{model.twitter}}
-        </div>
-        <div class="user-page__phone">
-            {{model.phone}}
-        </div>
-        <div class="user-page__email">
-            {{model.email}}
-        </div>
-        <div class="user-page__about">
-            {{model.about}}
-        </div>
+    <div class="user-page__instagram">
+      {{model.instagram}}
     </div>
+    <div class="user-page__twitter">
+      {{model.twitter}}
+    </div>
+    <div class="user-page__phone">
+      {{model.phone}}
+    </div>
+    <div class="user-page__email">
+      {{model.email}}
+    </div>
+    <div class="user-page__about">
+      {{model.about}}
+    </div>
+  </div>
 </div>
+
 <div class="user-page__tabs tabs">
-</div class="tabs__bar">
-<a class="tabs__link tabs__link_active">
-</a>
-<a class="tabs__link">
-</a>
-<a class="tabs__link">
-</a>
-<a class="tabs__link">
-</a>
-</div>
-<div class="tabs__content">
-</div>
+  <div class="tabs__bar">
+    <a class="tabs__link tabs__link_active"></a>
+    <a class="tabs__link"></a>
+    <a class="tabs__link"></a>
+    <a class="tabs__link"></a>
+  </div>
+  <div class="tabs__content">
+  </div>
 </div>
