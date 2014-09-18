@@ -1,13 +1,14 @@
+<div ng-controller="SignupCtrl">
 <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-
+  {{ registrationModel }}
   <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true %>
+    <%= f.input :email, required: true, autofocus: true, html_options: { "ng-model" => "registrationModel.email" } %>
+    <%= f.input :password, required: true, "ng-model" => "registrationModel.password" %>
     <%= f.input :password_confirmation, required: true %>
-    <%= f.select :city_id, options_for_select(cities_for_select) %>
+    <%= f.select :city_id, options_for_select(cities_for_select), "ng-model" => "registrationModel.city"%>
   </div>
 
   <div class="form-actions">
@@ -16,3 +17,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

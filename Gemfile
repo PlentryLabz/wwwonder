@@ -56,7 +56,6 @@ gem 'devise'
 gem 'jbuilder'
 gem 'gon'
 
-gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
 gem 'rest-client'
@@ -66,12 +65,9 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 
 gem 'haml-rails'
-gem "twitter-bootstrap-rails"
 gem 'simple_form'
 
-gem "jquery-fileupload-rails"
 gem 'rails-gallery'
-gem 'bootstrap-wysihtml5-rails'
 gem 'aws-sdk'
 gem 's3_direct_upload'
 

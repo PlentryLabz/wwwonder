@@ -16,6 +16,14 @@ App.config(function($routeProvider, $logProvider) {
             templateUrl: "edit-user-page.html",
             controller: "EditUserCtrl"
         })
+        .when('/sign_up', {
+            templateUrl: "sign-up.html",
+            controller: "SignupCtrl"
+        })
 
     $logProvider.debugEnabled(true);
+});
+
+
+App.run(function($rootScope, $log) {
 });

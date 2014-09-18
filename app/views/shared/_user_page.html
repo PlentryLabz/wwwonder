@@ -13,19 +13,50 @@
   </span>
 </div>
 <div class="user-page__main">
+    <div ng-controller="AvatarUploaderCtrl" class="user-page__avatar-wrapper">
+        <div ng-click="avatarUploader.selectFile()">
+            <img ng-hide="localAvatar"
+                 ng-src="{{model.avatar}}"
+                 err-src="uploads/tmp/{{model.avatar_tmp}}"
+                 class="user-page__avatar">
+        
+            <div ng-if="localAvatar">
+                 <div ng-show="avatarUploader.isHTML5"
+                      ng-thumb></div>
+            </div>
+        </div>
+        
 
-  <div class="user-page__avatar-wrapper">
-    <img ng-src="{{model.avatar}}" err-src="uploads/tmp/{{model.avatar_tmp}}" class="user-page__avatar" ng-click="avatarUploader.selectFile()">
-    <input ng-hide="true" id="avatar-uploader" type="file" nv-file-select uploader="avatarUploader"/>
-    <span class="user-page__like">
-    </span>
-    <span class="user-page__follow">
-    </span>
-  </div>
-
-  <div class="user-page__socials">
-    <div class="user-page__vk">
-      {{model.vk}}
+        <input ng-hide="true"
+               id="avatar-uploader"
+               type="file"
+               nv-file-select
+               uploader="avatarUploader"/>
+               
+        <span class="user-page__like">
+        </span>
+        <span class="user-page__follow">
+        </span>
+    </div>
+    <div class="user-page__socials">
+        <div class="user-page__vk">
+            {{model.vk}}
+        </div>
+        <div class="user-page__instagram">
+            {{model.instagram}}
+        </div>
+        <div class="user-page__twitter">
+            {{model.twitter}}
+        </div>
+        <div class="user-page__phone">
+            {{model.phone}}
+        </div>
+        <div class="user-page__email">
+            {{model.email}}
+        </div>
+        <div class="user-page__about">
+            {{model.about}}
+        </div>
     </div>
     <div class="user-page__instagram">
       {{model.instagram}}

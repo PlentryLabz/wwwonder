@@ -18,9 +18,10 @@
 //= require ../angular/app.js
 //= require_tree ../angular
 
-//= require jquery
-//= require jquery_ujs
-//= require twitter/bootstrap
+//= require jquery/dist/jquery.min
+//= require bootstrap/dist/js/bootstrap.min
+
+// require_tree bootstrap-js-components/dist/
 
 //= require_tree .
 

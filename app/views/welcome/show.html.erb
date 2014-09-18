@@ -1,56 +1,60 @@
-<div ng-app="App">
+<div>
 
-<div class="navbar navbar-inverse">
-  <div class="navbar-inner">
-  	<div class="nav-collapse collapse">
-	    <a class="brand" href="#">WWWonderful!</a>
-	    <ul class="nav nav-pills">
-	      <li class="active"><a href="#/users">Участницы</a></li>
-	      <li><a href="#/rules">Правила</a></li>
-	    </ul>
-	    <ul class="nav pull-right" ng-controller="AccountCtrl">
-	    	<li class="dropdown">
-  				<a class="dropdown-toggle" data-toggle="dropdown">
-  					Меню
-		    		<b class="caret"></b>
-  				</a>
-				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				    <li>
-				    	<a href="#/edit">
-				    		Редактировать
-				    	</a>
-				    </li>
-				    <li class="divider"></li>
-				    <li>
-				    	<a href="#" ng-click="logout()">
-				    		Выход
-				    	</a>
-				    </li>
-				  </ul>
-				</li>
-	     </ul>
-   	</div>
-  </div>
-</div>
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="nav-collapse collapse">
+            <a class="brand" href="#">WWWonderful!</a>
+            <ul class="nav nav-pills">
+            <li class="active"><a href="#/users">Участницы</a></li>
+            <li><a href="#/rules">Правила</a></li>
+            </ul>
+            <ul class="nav pull-right" ng-controller="AccountCtrl">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        Меню
+                        <b class="caret"></b>
+                    </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li>
+                            <a href="#/edit">
+                                Редактировать
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" ng-click="logout()">
+                                Выход
+                            </a>
+                        </li>
+                      </ul>
+                    </li>
+             </ul>
+        </div>
+      </div>
+    </div>
 
-	<ng-view></ng-view>
+    <ng-view></ng-view>
 
-	<script type="text/ng-template" id="users-page.html">
-		<%= render "shared/users_page" %>
-	</script>
+    <script type="text/ng-template" id="users-page.html">
+        <%= render "shared/users_page" %>
+    </script>
 
-	<script type="text/ng-template" id="user.html">
-		<div class="user">
-			<a class="user__link" ng-href="{{model.link}}">{{model.email}}</a>
-		</div>
-	</script>
+    <script type="text/ng-template" id="user.html">
+        <div class="user">
+            <a class="user__link" ng-href="{{model.link}}">{{model.email}}</a>
+        </div>
+    </script>
 
-	<script type="text/ng-template" id="user-page.html">
-		<%= render "shared/user_page" %>
-	</script>
+    <script type="text/ng-template" id="user-page.html">
+        <%= render "shared/user_page" %>
+    </script>
 
-	<script type="text/ng-template" id="edit-user-page.html">
-		<%= render "shared/edit_user_page" %>
-	</script>
+    <script type="text/ng-template" id="edit-user-page.html">
+        <%= render "shared/edit_user_page" %>
+    </script>
+
+    <script type="text/ng-template" id="sign-up.html">
+        <%= render "shared/edit_user_page" %>
+    </script>
 
 </div>

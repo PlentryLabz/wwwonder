@@ -23,16 +23,18 @@ App.controller("UserCtrl", function($log, $scope, $routeParams, Users, FileUploa
         $scope.model.about = data.about;
         $scope.model.city = data.city.name_ru;
     })
+});
 
 
-    /**
-     * Avatar uploader section
-     */
+App.controller("AvatarUploaderCtrl", function($log, $scope, FileUploader) {
 
     var avatarUploader = $scope.avatarUploader = new FileUploader({
         url: 'http://localhost:3000/api/v1/upload',
         alias: "pic"
     });
+
+    $scope.localAvatar = null;
+
 
     // hack for selecting file by clicking on a div
     avatarUploader.selectFile = function () {
@@ -40,6 +42,16 @@ App.controller("UserCtrl", function($log, $scope, $routeParams, Users, FileUploa
        // code somthing like this: if (!$scope.currentUser.is_owner_of_profile) return;
        document.getElementById('avatar-uploader').click();
     };
+
+    // FILTERS
+
+    avatarUploader.filters.push({
+        name: 'imageFilter',
+        fn: function(item /*{File|FileLikeObject}*/, options) {
+            var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+            return '|jpg|png|jpeg|'.indexOf(type) !== -1;
+        }
+    });
 
     // CALLBACKS
 
@@ -55,6 +67,8 @@ App.controller("UserCtrl", function($log, $scope, $routeParams, Users, FileUploa
     };
     avatarUploader.onBeforeUploadItem = function(item) {
         $log.debug('onBeforeUploadItem', item);
+
+        $scope.localAvatar = null;
     };
     avatarUploader.onProgressItem = function(fileItem, progress) {
         $log.debug('onProgressItem', fileItem, progress);
@@ -64,6 +78,8 @@ App.controller("UserCtrl", function($log, $scope, $routeParams, Users, FileUploa
     };
     avatarUploader.onSuccessItem = function(fileItem, response, status, headers) {
         $log.debug('onSuccessItem', fileItem, response, status, headers);
+
+        $scope.localAvatar = avatarUploader.queue[0];
     };
     avatarUploader.onErrorItem = function(fileItem, response, status, headers) {
         $log.debug('onErrorItem', fileItem, response, status, headers);
@@ -76,8 +92,9 @@ App.controller("UserCtrl", function($log, $scope, $routeParams, Users, FileUploa
     };
     avatarUploader.onCompleteAll = function() {
         $log.debug('onCompleteAll');
+
+        avatarUploader.clearQueue();
     };
 
     $log.debug('avatarUploader', avatarUploader);
-
 });
