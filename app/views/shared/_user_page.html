@@ -2,26 +2,27 @@
   <span class="user-page__place">
   </span>
   <span class="user-page__name">
-    {{model.firstName}} {{model.lastName}}
+    {{vm.model.firstName}} {{vm.model.lastName}}
   </span>
   <span class="user-page__city-age">
     <div class="user-page__city">
-      {{model.city}}
+      {{vm.model.city}}
     </div>
     <div class="user-page__age">
     </div>
   </span>
 </div>
 <div class="user-page__main">
-    <div ng-controller="AvatarUploaderCtrl" class="user-page__avatar-wrapper">
-        <div ng-click="avatarUploader.selectFile()">
-            <img ng-hide="localAvatar"
-                 ng-src="{{model.avatar}}"
-                 err-src="uploads/tmp/{{model.avatar_tmp}}"
+    <div ng-controller="AvatarUploaderController as avatarVm" class="user-page__avatar-wrapper">
+        <div ng-click="avatarVm.avatarUploader.selectFile()">
+        {{avatarVm.localAvatar.url}}
+            <img ng-hide="avatarVm.localAvatar"
+                 ng-src="{{vm.model.avatar}}"
+                 err-src="uploads/tmp/{{vm.model.avatar_tmp}}"
                  class="user-page__avatar">
         
-            <div ng-if="localAvatar">
-                 <div ng-show="avatarUploader.isHTML5"
+            <div ng-if="avatarVm.localAvatar">
+                 <div ng-show="avatarVm.avatarUploader.isHTML5"
                       ng-thumb></div>
             </div>
         </div>
@@ -31,7 +32,7 @@
                id="avatar-uploader"
                type="file"
                nv-file-select
-               uploader="avatarUploader"/>
+               uploader="avatarVm.avatarUploader"/>
                
         <span class="user-page__like">
         </span>
@@ -40,38 +41,38 @@
     </div>
     <div class="user-page__socials">
         <div class="user-page__vk">
-            {{model.vk}}
+            {{vm.model.vk}}
         </div>
         <div class="user-page__instagram">
-            {{model.instagram}}
+            {{vm.model.instagram}}
         </div>
         <div class="user-page__twitter">
-            {{model.twitter}}
+            {{vm.model.twitter}}
         </div>
         <div class="user-page__phone">
-            {{model.phone}}
+            {{vm.model.phone}}
         </div>
         <div class="user-page__email">
-            {{model.email}}
+            {{vm.model.email}}
         </div>
         <div class="user-page__about">
-            {{model.about}}
+            {{vm.model.about}}
         </div>
     </div>
     <div class="user-page__instagram">
-      {{model.instagram}}
+      {{vm.model.instagram}}
     </div>
     <div class="user-page__twitter">
-      {{model.twitter}}
+      {{vm.model.twitter}}
     </div>
     <div class="user-page__phone">
-      {{model.phone}}
+      {{vm.model.phone}}
     </div>
     <div class="user-page__email">
-      {{model.email}}
+      {{vm.model.email}}
     </div>
     <div class="user-page__about">
-      {{model.about}}
+      {{vm.model.about}}
     </div>
   </div>
 </div>

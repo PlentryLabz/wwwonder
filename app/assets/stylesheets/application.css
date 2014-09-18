@@ -12,6 +12,7 @@
  *= require_tree .
  *= require bootstrap-css/css/bootstrap.min
  *= require bootstrap-css/css/bootstrap-responsive.min
+ *= require angular-loading-bar/build/loading-bar.min
  *
  * For Bootstrap 3:
  * require bootstrap/dist/css/bootstrap-theme.min
