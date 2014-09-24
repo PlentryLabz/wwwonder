@@ -1,0 +1,62 @@
+<form class="form-horizontal" ng-submit="vm.register()">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Form Name</legend>
+
+        <!-- Text input-->
+        <div class="control-group">
+            <label class="control-label" for="email">Email</label>
+            <div class="controls">
+                <input ng-model="vm.credentials.email" 
+                        id="email" name="email" type="email" placeholder="" class="input-xlarge" required="">
+            <span class="help-block">{{ vm.errors.email }}</span>
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+            <label class="control-label" for="password">Пароль</label>
+            <div class="controls">
+                <input ng-model="vm.credentials.password" 
+                        id="password" name="password" type="password" placeholder="" class="input-xlarge" required="">
+                
+                <span class="help-block">{{ vm.errors.password }}</span>
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+            <label class="control-label" for="password_confirmation">Повтор пароля</label>
+            <div class="controls">
+                <input ng-model="vm.credentials.password_confirmation" 
+                        id="password_confirmation" name="password_confirmation" type="password" placeholder="" class="input-xlarge" required="">
+            <span class="help-block">{{ vm.errors.password_confirmation }}</span>
+
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="control-group">
+            <label class="control-label" for="city_id">Город</label>
+            <div class="controls">
+                <%= select_tag "city_id",
+                        options_for_select(cities_for_select),
+                        { 'ng-model' => 'vm.credentials.city_id' }%>
+            <span class="help-block">{{ vm.errors.city_id }}</span>
+
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="control-group">
+            <label class="control-label" for="submit"></label>
+            <div class="controls">
+                <button id="submit" name="submit" class="btn btn-default">Отправить</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>

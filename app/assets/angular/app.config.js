@@ -20,7 +20,7 @@
                     controllerAs: 'vm'
                 })
                 .when('/sign_up', {
-                    templateUrl: "sign-up.html",
+                    templateUrl: "/web/sign_up",
                     controller: "SignupController",
                     controllerAs: 'vm'
                 })

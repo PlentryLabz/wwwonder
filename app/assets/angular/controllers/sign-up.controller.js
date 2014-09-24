@@ -4,13 +4,14 @@
     angular.module('App')
         .controller("SignupController", SignupController);
 
-    SignupController.$inject = ['$log', 'Auth', '$scope', '$routeParams', 'UsersResource', 'FileUploader'];
+    SignupController.$inject = ['$log', '$location', 'Auth', '$scope', '$routeParams', 'UsersResource', 'FileUploader'];
 
-    function SignupController($log, Auth, $scope, $routeParams, UsersResource, FileUploader) {
+    function SignupController($log, $location, Auth, $scope, $routeParams, UsersResource, FileUploader) {
         var vm = this;
 
         vm.credentials = getCredentialsObj();
         vm.register = register;
+        vm.errors = null;
 
         activation();
         ////////////////////////////////////////
@@ -27,17 +28,24 @@
                 email: '',
                 password: '',
                 password_confirmation: '',
-                city_id: null
+                city_id: 1
             }
         }
 
         function register() {
             $log.log("GOGOG")
+            // if (vm.credentials.password != vm.credentials.password_confirmation) {
+                // vm.errors["password"] = vm.errors["password_confirmation"] = "Passwords do not match.";
+                // return;
+            // };
+
             Auth.register(vm.credentials).then(function(registeredUser) {
                 console.log(registeredUser); // => {id: 1, ect: '...'}
-            }, function(error) {
-                // Registration failed...
-                console.log(error);
+                $location.path('/users/' + registeredUser.id)
+            }, function(respond) {
+                $log.error(respond);
+
+                vm.errors = respond.data.errors;
             });
 
         }
