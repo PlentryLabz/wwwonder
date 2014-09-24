@@ -1,8 +1,8 @@
 require 'sidekiq/web'
 Wwwonder::Application.routes.draw do
 
-  resource :welcome, only: [:show]
-  root to: 'welcome#show'
+  resource :base, only: [:show]
+  root to: 'base#show'
 
   devise_for :users
 
@@ -20,6 +20,10 @@ Wwwonder::Application.routes.draw do
 
       resource :upload, only: [:create]
     end
+  end
+
+  namespace :web do
+    resource :users
   end
 
   mount Sidekiq::Web, at: "/sidekiq"
