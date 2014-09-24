@@ -5,17 +5,17 @@
         .config(function($routeProvider, $logProvider) {
             $routeProvider
                 .when('/users', {
-                    templateUrl: "users-page.html",
+                    templateUrl: "/web/users_page",
                     controller: "UsersController",
                     controllerAs: 'vm'
                 })
                 .when('/users/:id', {
-                    templateUrl: "user-page.html",
+                    templateUrl: "/web/user_page",
                     controller: "UserController",
                     controllerAs: 'vm'
                 })
                 .when('/edit', {
-                    templateUrl: "edit-user-page.html",
+                    templateUrl: "/web/edit_user_page",
                     controller: "EditUserController",
                     controllerAs: 'vm'
                 })

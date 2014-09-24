@@ -10,7 +10,7 @@
         var directive = {
             scope: {},
             restrict: "E",
-            templateUrl: "user.html",
+            templateUrl: "/web/user",
             replace: true,
             link: link
         };
