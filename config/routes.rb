@@ -22,9 +22,7 @@ Wwwonder::Application.routes.draw do
     end
   end
 
-  namespace :web do
-    resource :users
-  end
+  get "/web/*id" => 'web#show', as: :page, format: false
 
   mount Sidekiq::Web, at: "/sidekiq"
 end
