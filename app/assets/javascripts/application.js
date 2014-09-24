@@ -23,7 +23,5 @@
 //= require jquery/dist/jquery.min
 //= require bootstrap/dist/js/bootstrap.min
 
-// require_tree bootstrap-js-components/dist/
-
 //= require_tree .
 
