@@ -5,6 +5,8 @@
         'ngRoute',
         'ngResource',
 
+        'Devise',
+
         'angularFileUpload'
     ]);
 })();

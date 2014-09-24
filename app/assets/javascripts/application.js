@@ -15,6 +15,7 @@
 //= require angular-resource/angular-resource.min
 //= require angular-file-upload/angular-file-upload.min
 //= require angular-loading-bar/build/loading-bar.min
+//= require angular-devise/lib/devise-min
 
 //= require ../angular/app.js
 //= require_tree ../angular
